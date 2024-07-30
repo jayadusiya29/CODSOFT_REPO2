@@ -1,0 +1,54 @@
+import java.util.*;
+public class grade
+{
+  static float m[] = new float[5],t,a;
+  public void input ()
+  {
+	Scanner in = new Scanner (System.in);
+	  System.out.println ("Enter marks out of 100");
+	  System.out.println ("English: ");
+	  m[0] = in.nextFloat ();
+	  System.out.println ("Mathematics: ");
+	  m[1] = in.nextFloat ();
+	  System.out.println ("Science: ");
+	  m[2] = in.nextFloat ();
+	  System.out.println ("Social Science: ");
+	  m[3] = in.nextFloat ();
+	  System.out.println ("Computer: ");
+	  m[4] = in.nextFloat ();
+  }
+  public void calc()
+  {
+    t=m[0]+m[1]+m[2]+m[3]+m[4];
+    a=t/5;
+  }
+  public String grade()
+  {
+    if(a>=90)
+     return "+A";
+    else if(a>=80)
+     return "A";
+    else if(a>=70)
+     return "+B";
+    else if(a>=60)
+     return "B";
+    else if(a>=50)
+     return "+C";
+    else if(a>=40)
+     return "C";
+    else if(a>=30)
+     return "D";
+    else
+     return "F";
+     
+  }
+  public static void main (String args[])
+  {
+	grade ob = new grade ();
+	ob.input();
+	ob.calc();
+	System.out.println("Total Marks : "+t);
+	System.out.println("Percentage : "+a);
+	System.out.println("Grade : "+ob.grade());
+  }
+}
